@@ -1,0 +1,57 @@
+<ion-view title="Cadastro de Aparelhos" id="page10">
+  <ion-nav-buttons side="left" class="has-header">
+    <button class="button button-icon icon ion-arrow-left-c"></button>
+  </ion-nav-buttons>
+  <ion-content padding="true" class="has-header">
+    <form id="cadastroDeAparelhos-form7" class="list">
+      <label class="item item-select" id="cadastroDeAparelhos-select2">
+        <span class="input-label">Tipo de Aparelho</span>
+        <select>
+          <option>Celular</option>
+          <option>Tablet</option>
+          <option>Bicicleta</option>
+          <option>Apple Watch</option>
+          <option>Outro</option>
+        </select>
+      </label>
+      <label class="item item-select" id="cadastroDeAparelhos-select3">
+        <span class="input-label">Marca</span>
+        <select>
+          <option>Samsung</option>
+          <option>Apple</option>
+          <option>Asus</option>
+          <option>LG</option>
+          <option>Motorola</option>
+          <option>Outro</option>
+        </select>
+      </label>
+      <label class="item item-input" id="cadastroDeAparelhos-input24">
+        <span class="input-label">Modelo</span>
+        <input type="text" placeholder="">
+      </label>
+      <label class="item item-select" id="cadastroDeAparelhos-select4">
+        <span class="input-label">Status do Aparelho</span>
+        <select>
+          <option>Furtado/Roubado</option>
+          <option>Seguro</option>
+          <option>Vendido</option>
+          <option>Outro</option>
+        </select>
+      </label>
+      <label class="item item-input" id="cadastroDeAparelhos-input23">
+        <span class="input-label">IMEI</span>
+        <input type="text" placeholder="">
+      </label>
+      <label class="item item-input" id="cadastroDeAparelhos-textarea1">
+        <span class="input-label">Descrição</span><textarea placeholder=""></textarea></label>
+      <label class="item item-input" id="cadastroDeAparelhos-textarea2">
+        <span class="input-label">NF</span><textarea placeholder=""></textarea></label>
+      <ion-toggle toggle-class="toggle-balanced" id="cadastroDeAparelhos-toggle3">Furtado</ion-toggle>
+      <label class="item item-input" id="cadastroDeAparelhos-input25">
+        <span class="input-label">Número do Quadro</span>
+        <input type="number" placeholder="">
+      </label>
+    </form>
+    <a ui-sref="usuarioLogado()" id="cadastroDeAparelhos-button29" class="button button-balanced button-block">Cadastrar</a>
+  </ion-content>
+</ion-view>
