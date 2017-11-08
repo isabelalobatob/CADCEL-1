@@ -1,6 +1,6 @@
 <ion-view title="Login" id="page2">
   <ion-nav-buttons side="left" class="has-header">
-    <!--<button class="button button-icon icon ion-arrow-left-c"></button>-->
+    <button class="button button-icon icon ion-arrow-left-c"></button>
   </ion-nav-buttons>
   <ion-content padding="true" class="has-header">
     <form id="login-form1" class="list">
@@ -11,16 +11,16 @@
       <ion-list id="login-list1">
         <label class="item item-input" id="login-input1">
           <span class="input-label">Email</span>
-          <input type="email" placeholder="">
+          <input type="email" placeholder="" id="inputloginemail">
         </label>
         <label class="item item-input" id="login-input2">
           <span class="input-label">Senha</span>
-          <input type="password" placeholder="">
+          <input type="password" placeholder="" id="inputloginhash">
         </label>
       </ion-list>
       <a ui-sref="recuperarSenha()" id="login-button21" class="button button-positive button-block button-clear">Deseja recuperar sua senha?</a>
       <a ui-sref="cadastroUsuRio()" id="login-button18" class="button button-positive button-block button-clear">Ainda não possui cadastro?</a>
-      <a ui-sref="usuarioLogado()" id="login-button11" class="button button-balanced button-block">Log in</a>
+      <a id="login-button11" class="button button-balanced button-block" ng-click=login() >Log in</a>
     </form>
   </ion-content>
 </ion-view>
