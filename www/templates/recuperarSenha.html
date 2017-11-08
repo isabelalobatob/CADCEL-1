@@ -5,10 +5,15 @@
   <ion-content padding="true" class="has-header">
     <form id="recuperarSenha-form5" class="list">
       <div class="spacer" style="height: 155px;"></div>
-      <label class="item item-input" id="recuperarSenha-input20">
-        <input type="text" placeholder="Digite seu Email">
+      <label class="item item-input" id="recuperarSenha">
+        <input type="text" placeholder="Digite seu Email" ng-model="data.email">
       </label>
     </form>
-    <button id="recuperarSenha-button10" class="button button-calm button-block">Recuperar</button>
+    <button id="recuperarSenha-button10" class="button button-calm button-block" ng-click=submit()>Recuperar</button>
+    <div class="card">
+                    <div class="item item-text-wrap">
+                        Response: <b ng-bind="response"></b>
+                    </div>
+                </div>
   </ion-content>
 </ion-view>

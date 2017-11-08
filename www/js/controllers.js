@@ -24,37 +24,37 @@ function ($scope,$http,$stateParams,$state) {
     console.log(newVal);
   });*/
   $scope.teste = function(){
-  var nome = document.getElementById('inputcadastronome').value;
-  var email = document.getElementById('inputcadastroemail').value;
-  var cpf = document.getElementById('inputcadastrocpf').value;
-  var birth = document.getElementById('inputcadastrobirth').value;
-  var celular = document.getElementById('inputcadastrocelular').value;
-  var endereco = document.getElementById('inputcadastroendereco').value;
-  var senha = document.getElementById('inputcadastrosenha').value;
-  var csenha = document.getElementById('inputcadastrocsenha').value;
-  var Usuario = {nome, email, cpf, birth, celular, endereco, senha, csenha};
-  console.log(Usuario);
-  var parametro = JSON.stringify({type:'Usuario', cpf:cpf, nome:nome, nascimento:birth, telefone:celular, email:email});
-  var link = 'localhost/cadcel/login.php';
+    var nome = document.getElementById('inputcadastronome').value;
+    var email = document.getElementById('inputcadastroemail').value;
+    var cpf = document.getElementById('inputcadastrocpf').value;
+    var birth = document.getElementById('inputcadastrobirth').value;
+    var celular = document.getElementById('inputcadastrocelular').value;
+    var endereco = document.getElementById('inputcadastroendereco').value;
+    var senha = document.getElementById('inputcadastrosenha').value;
+    var csenha = document.getElementById('inputcadastrocsenha').value;
+    var Usuario = {nome, email, cpf, birth, celular, endereco, senha, csenha};
+    console.log(Usuario);
+    var parametro = JSON.stringify({type:'Usuario', cpf:cpf, nome:nome, nascimento:birth, telefone:celular, email:email});
+    var link = 'localhost/cadcel/login.php';
 
-  $http.post(link ,parametro).
-    success(function(data, status, headers, config)
-    {
-      $state.go("login");
-    }).
-    error(function(data, status, headers, config)
-    {
-      alert("Erro na conexão");
-    })
-    if(success=true)
-    {
-      alert('Bem vindo');
-    }
-    else
-    {
-      alert('Erro no cadastramento');
-    }
-  };
+    $http.post(link ,parametro).
+      success(function(data, status, headers, config)
+      {
+        $state.go("login");
+      }).
+      error(function(data, status, headers, config)
+      {
+        alert("Erro na conexão");
+      })
+      if(success=true)
+      {
+        alert('Bem vindo');
+      }
+      else
+      {
+        alert('Erro no cadastramento');
+      }
+    };
 }]);
 
 app.controller('cadastroAgenteCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
@@ -72,10 +72,23 @@ function ($scope, $stateParams) {
 
 }])
 
-.controller('recuperarSenhaCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
+.controller('recuperarSenhaCtrl', ['$scope','$http','$stateParams','$state', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams) {
+function ($scope,$http,$stateParams,$state) {
+
+  $scope.data = {};
+
+  $scope.submit = function(){
+    var email = document.getElementById('recuperarSenha').value;
+    var parametro = JSON.stringify({email:email});
+    var link = 'http://localhost/cadcel/recuperarSenha.php';
+
+    $http.post(link, {email : $scope.data.email}).then(function(res){
+      $scope.response = res.data;
+    })
+
+    };
 
 }])
 
@@ -117,7 +130,10 @@ function ($scope, $stateParams, $http) {
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
 function ($scope, $stateParams) {
-
+  $scope.pesquisar = function(){
+    var imei = document.getElementById('inputImei').value;
+    var link = 'localhost/cadcel/consulta.php';
+  }
 
 }])
 

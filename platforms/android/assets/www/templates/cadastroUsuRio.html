@@ -1,0 +1,46 @@
+<ion-view title="Cadastro - Usuário " id="page3">
+  <ion-nav-buttons side="left" class="has-header">
+    <button class="button button-icon icon ion-arrow-left-c"></button>
+  </ion-nav-buttons>
+  <ion-content padding="true" class="has-header" ng-controller="cadastroUsuRioCtrl">
+    <form id="cadastroUsuRio-form2" class="list">
+      <a ui-sref="cadastroAgente()" id="cadastroUsuRio-button15" class="button button-calm button-block">Agente de Segurança (?)</a>
+      <ion-list id="cadastroUsuRio-list2">
+        <label class="item item-input" id="cadastroUsuRio-input3">
+          <span class="input-label">Nome</span>
+          <input type="text" placeholder="Mínimo 6 caracteres" id="inputcadastronome">
+        </label>
+        <label class="item item-input" id="cadastroUsuRio-input4">
+          <span class="input-label">Email</span>
+          <input type="email" ng-model=myvar placeholder="" id="inputcadastroemail">
+        </label>
+        <label class="item item-input" id="cadastroUsuRio-input6">
+          <span class="input-label">CPF</span>
+          <input type="text" ng-model=myvar placeholder="" id="inputcadastrocpf">
+        </label>
+        <label class="item item-input" id="cadastroUsuRio-input7">
+          <span class="input-label">Data de Nascimento</span>
+          <input type="date" ng-model=myvar placeholder="" id="inputcadastrobirth">
+        </label>
+        <label class="item item-input" id="cadastroUsuRio-input8">
+          <span class="input-label">Celular</span>
+          <input type="tel" ng-model=myvar placeholder="" id="inputcadastrocelular">
+        </label>
+        <label class="item item-input" id="cadastroUsuRio-input9">
+          <span class="input-label">Endereço</span>
+          <input type="text" ng-model=myvar placeholder="" id="inputcadastroendereco">
+        </label>
+        <label class="item item-input" id="cadastroUsuRio-input5">
+          <span class="input-label">Senha</span>
+          <input type="text" ng-model=myvar placeholder="" id="inputcadastrosenha">
+        </label>
+        <label class="item item-input" id="cadastroUsuRio-input10">
+          <span class="input-label">Confirmação da senha</span>
+          <input type="text" ng-model=myvar placeholder="" id="inputcadastrocsenha">
+        </label>
+      </ion-list>
+      <button id="cadastroUsuRio-button13" style="border-radius:2px 2px 2px 2px;"
+      class="button button-balanced button-block" ng-click=teste()>Cadastre-se</button>
+    </form>
+  </ion-content>
+</ion-view>
